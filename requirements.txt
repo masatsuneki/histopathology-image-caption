@@ -1,0 +1,4 @@
+simple-parsing==0.0.17
+nltk==3.6.5
+pandas==1.1.2
+wandb

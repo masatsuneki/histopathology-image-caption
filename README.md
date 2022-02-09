@@ -22,3 +22,23 @@ If you use this Dataset, please cite:
       primaryClass={eess.IV}
 }
 ```
+
+## Running training script for baseline model
+
+build the docker image
+
+```
+docker build -t histo-captions .
+```
+
+Assuming the the patches have been extracted at `/mnt/data/patches/x20` and the `captions.csv` file is at `/mnt/data/captions.csv`, you can run it with default settings with
+
+```
+docker run -v /mnt/data:/data -it histo-captions  python train.py 
+```
+
+To check for available options, run
+
+```
+docker run -v /mnt/data:/data -it histo-captions  python train.py --help
+```
